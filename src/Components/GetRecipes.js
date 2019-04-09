@@ -1,35 +1,42 @@
 import React, { Component } from 'react';
 import axios from "axios"
-export default class AddRecipe extends Component {
+import AddRecipe from "./AddRecipe"
+export default class GetRecipe extends Component {
 
   constructor() {
     super()
     this.state = {
       recipes: []
     }
+    this.addRecipe=this.addRecipe.bind(this)
   }
-
+  
   componentDidMount() {
     axios.get('/api/recipes').then(results => {
-      console.log(results)
       this.setState({ recipes: results.data })
 
     })
       .catch(err => console.log("ERROR"))
   }
 
+  addRecipe(){
+    axios.post("/api/recipes", this.state).then(results => {
+      this.setState({recipes:results.data})
+    })
+    .catch(err=> console.log("Error on put"))
+  }
 
   render() {
-
+    console.log(this.state.recipes)
     let newRecipes = this.state.recipes.length > 0 ? this.state.recipes.map((recipe) => {
-      console.log(recipe)
+      
       return (
 
         <div className="parentofAll">
           <p className="recipeName" key="recipe.name">Recipe name: {recipe.name}</p>
           <div className="parentOfDetails">
             <p className="recipeId" key="recipe.id">Id:{recipe.id} </p>
-            <img src={recipe.image} />
+            <img src={recipe.image} width="300px" height="280px" alt="not found"/>
             <p>Directions: {recipe.directions}</p>
           </div>
 
@@ -49,6 +56,7 @@ export default class AddRecipe extends Component {
 
     return (
       <div>
+        <AddRecipe recipes ={this.state.recipes} addRecipe={this.addRecipe} />
         {newRecipes}
       </div>
     )
