@@ -37,7 +37,7 @@ export default class Recipes extends Component {
   }
 
   render(){
-
+    console.log("thisone", this.state.recipes)
     return(
         <div>
          <CreateRecipeForm handleCreate = {this.createRecipe}/> 

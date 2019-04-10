@@ -6,21 +6,28 @@ class CreateRecipeForm extends Component {
 
     this.state = { 
       title: "",
-      ingredient: "",
+      ingredient1: "",
       ingredient2: "",
+      ingredient3: "",
+      ingredient4: "",
+      ingredient5: "",
       imageUrl: "",
-      directions: ""
+      directions: "",
+      
     }
   }
 
   handleChange = e => {
     
     let {value, name} = e.target
+    
     this.setState({
       [name]:value
     })
   }
 
+
+  
   handleClick = () => {
     let newRecipe = this.state
     this.props.handleCreate(newRecipe)
@@ -40,12 +47,27 @@ class CreateRecipeForm extends Component {
         type="text" 
         placeholder="image url"/>
         <input 
-        name="ingredient" 
+        name="ingredient1" 
         onChange={this.handleChange}  
         type="text" 
         placeholder="ingredient"/>
         <input 
         name="ingredient2" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient3" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient4" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient5" 
         onChange={this.handleChange}  
         type="text" 
         placeholder="ingredient"/>

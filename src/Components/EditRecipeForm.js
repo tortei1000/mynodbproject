@@ -8,21 +8,29 @@ export default class EditRecipeForm extends Component {
     this.state = {
       title: props.recipe.title,
       imageUrl: props.recipe.imageUrl,
-      ingredient: props.recipe.ingredient
+      ingredient1: props.recipe.ingredient1,
+      ingredient2: props.recipe.ingredient2,
+      ingredient3: props.recipe.ingredient3,
+      ingredient4: props.recipe.ingredient4,
+      ingredient5: props.recipe.ingredient5,
+      directions: props.recipe.directions
     }
   }
 
   handleChange = e => {
     
     let {value, name} = e.target
+    
     this.setState({
       [name]:value
     })
   }
 
+
+  
   handleClick = () => {
-    let recipe = {...this.props.recipe, ...this.state}
-    this.props.updateRecipe(recipe)
+    let newRecipe = this.state
+    this.props.updateRecipe(newRecipe)
   }
 
   render(){
@@ -32,20 +40,42 @@ export default class EditRecipeForm extends Component {
         name="title" 
         onChange={this.handleChange} 
         type="text" 
-        placeholder="title"
-        value={this.state.species}/>
+        placeholder="title"/>
         <input 
         name="imageUrl" 
         onChange={this.handleChange} 
         type="text" 
-        placeholder="image url"
-        value={this.state.imageUrl}/>
+        placeholder="image url"/>
         <input 
-        name="ingredient" 
+        name="ingredient1" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"
-        value={this.state.quantity}/>
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient2" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient3" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient4" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="ingredient5" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="ingredient"/>
+        <input 
+        name="directions" 
+        onChange={this.handleChange}  
+        type="text" 
+        placeholder="directions"/>
         <button onClick={this.handleClick} >update recipe</button>
       </div>
     )
