@@ -2,7 +2,14 @@
   "name": "mynodbproject",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "main":"server/index.js",
+  "proxy":"http://localhost:4040",
+  "nodemonConfig": {
+    "ignore": [
+      "src/*",
+      "public/*"
+    ]
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",

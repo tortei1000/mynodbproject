@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GetRecipes from "./Components/GetRecipes"
+import Recipes from "./Components/Recipes"
+import "./App.css"
 
 import './App.css';
 
@@ -7,7 +8,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GetRecipes />
+        <header style={{borderBottom: '1px solid #d3d3d3'}}>
+          <h1>Pantrify</h1>
+        </header>
+        <Recipes />
       </div>
     );
   }

@@ -1,7 +1,8 @@
 const express = require('express');
 let app = express();
-const port = 5000;
+const port = 4040;
 const RecipesCtrl = require("./controllers/recipes")
+
 app.use(express.json())
 
 
