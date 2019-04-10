@@ -77,6 +77,7 @@ export default class EditRecipeForm extends Component {
         type="text" 
         placeholder="directions"/>
         <button onClick={this.handleClick} >update recipe</button>
+        <button onClick={this.props.toggleEdit} >done editing</button>
       </div>
     )
   }

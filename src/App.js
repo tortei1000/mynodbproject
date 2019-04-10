@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Recipes from "./Components/Recipes"
 import "./App.css"
 
-import './App.css';
+
 
 class App extends Component {
   render() {
