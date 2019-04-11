@@ -3,6 +3,7 @@ import axios from "axios"
 import Recipe from "./Recipe"
 import CreateRecipeForm from "./CreateRecipeForm"
 import Header from "./Header";
+import "./Recipes.css"
 
 export default class Recipes extends Component {
   constructor() {
@@ -58,12 +59,14 @@ export default class Recipes extends Component {
   render(){
     console.log("thisone", this.state.recipes)
     return(
-        <div>
-        <Header searchRecipe={this.searchRecipe} 
-        recipes={this.recipes} />
-        <CreateRecipeForm handleCreate = {this.createRecipe}/> 
-        {this.state.recipes.map(recipe => {
-          return <Recipe 
+        <div className="mainDiv">
+          <div className="secondDiv">
+            <Header searchRecipe={this.searchRecipe} 
+              recipes={this.recipes} />
+          </div>
+          <CreateRecipeForm handleCreate = {this.createRecipe}/> 
+            {this.state.recipes.map(recipe => {
+            return <Recipe 
                     key={recipe.id} 
                     recipe={recipe} 
                     updateRecipe ={this.updateRecipe}

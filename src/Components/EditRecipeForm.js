@@ -35,7 +35,8 @@ export default class EditRecipeForm extends Component {
 
   render(){
     return(
-      <div style={{border: "1px solid black", margin: 20}}>
+      <div className="mainDiv" style={{border: "1px solid black", margin: 20}}>
+        <h2>Edit this recipe</h2>
         <input 
         name="title" 
         onChange={this.handleChange} 
@@ -76,8 +77,8 @@ export default class EditRecipeForm extends Component {
         onChange={this.handleChange}  
         type="text" 
         placeholder="directions"/>
-        <button onClick={this.handleClick} >update recipe</button>
-        <button onClick={this.props.toggleEdit} >done editing</button>
+        <button className="bottomButton" onClick={this.handleClick} >update recipe</button>
+        <button className="bottomButton" onClick={this.props.toggleEdit}> Cancel</button>
       </div>
     )
   }

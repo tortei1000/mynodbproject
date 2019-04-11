@@ -1,0 +1,11 @@
+.mainDiv{
+  
+}
+.secondDiv{
+  width: 100vw;
+  height: 5vw;
+  border: 1px solid rebeccapurple;
+  font-size: 30px;
+  display: flex;
+  align-content: space-between;
+}

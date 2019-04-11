@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import "./CreateRecipeForm.css"
 
 class CreateRecipeForm extends Component {
   constructor(){
@@ -35,7 +36,10 @@ class CreateRecipeForm extends Component {
 
   render(){
     return(
-      <div style={{border: "1px solid black", margin: 20}}>
+      <div className="mainDiv">
+        <h2>Create your recipe</h2>
+        <img className="imageonCreate" src="http://sourcehomeobject.com/site_files/11951/upload_images/blog/c952c172ed213b288c8365b126a3dfc5.png" width="300" />
+        <div className="itemCtrl">
         <input 
         name="title" 
         onChange={this.handleChange} 
@@ -76,7 +80,8 @@ class CreateRecipeForm extends Component {
         onChange={this.handleChange}  
         type="text" 
         placeholder="directions"/>
-        <button onClick={this.handleClick} >create new recipe</button>
+        </div>
+        <button className="bottomButton" onClick={this.handleClick} >create new recipe</button>
       </div>
     )
   }

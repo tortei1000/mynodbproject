@@ -1,27 +1,18 @@
 .App {
+  height: 100vw;
+  margin: 0;
+  border: 0;
   text-align: center;
+  background: #ebf1f6;
+  background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 71%, #d5ebfb 100%);
+  background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 71%,#d5ebfb 100%);
+  background: linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 50%,#89c3eb 71%,#d5ebfb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 );
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

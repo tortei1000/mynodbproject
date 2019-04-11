@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./Header.css"
 
 
 
@@ -10,7 +10,7 @@ import Search from './Search';
 export default class Header extends Component {
   render() {
     return (
-      <section className="Header__parent">
+      <div className="Header__parent">
         <section className="Header__content">
 
           {/* Displays LOGO */}
@@ -31,7 +31,7 @@ export default class Header extends Component {
           </div>
 
         </section>
-      </section>
+      </div>
     )
   }
 }

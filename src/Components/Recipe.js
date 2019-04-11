@@ -24,7 +24,7 @@ export default class Recipe extends Component {
       console.log(recipe.ingredient)
     return(
        this.state.edit ? <EditRecipeForm recipe={recipe} updateRecipe={this.props.updateRecipe} toggleEdit={this.toggleEdit}/> :
-      <div className="mainRecipeBody" style={{border: "1px solid black", margin: 10,}}>
+      <div className="mainRecipeBody">
         <img src={recipe.imageUrl} alt="" width="300"/>
         <h2>{recipe.title}</h2>
         <h3>ingredients:</h3>
@@ -35,8 +35,8 @@ export default class Recipe extends Component {
         <p>{recipe.ingredient5}</p>
         <h3>Directions:</h3>
         <p>{recipe.directions}</p>
-        <button onClick={this.toggleEdit}>edit</button>
-        <button onClick={this.props.removeRecipe}>Delete</button>
+        <button className="bottomButton" onClick={this.toggleEdit}>edit</button>
+        <button className="bottomButton" onClick={this.props.removeRecipe}>Delete</button>
         
       </div>
     )
