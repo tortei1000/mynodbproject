@@ -1,8 +1,8 @@
 .mainRecipeBody{
   margin: 5px;
   border: 2px solid #0099CC;
-  width: 20vw;
-  height: 30vw;
+  width: 25vw;
+  height: 35vw;
   font-size: 10px;
   align-content: center;
   justify-items: center;
@@ -15,8 +15,8 @@
 }
 .mainRecipeBody:hover{
   box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.75);
-  width: 30vw;
-  height: 60vw;
+  width: 35vw;
+  height: 50vw;
   font-size: 15px;
   overflow: auto;
 }
