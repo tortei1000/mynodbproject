@@ -36,6 +36,7 @@ export default class Recipe extends Component {
         <h3>Directions:</h3>
         <p>{recipe.directions}</p>
         <button onClick={this.toggleEdit}>edit</button>
+        <button onClick={this.props.removeRecipe}>Delete</button>
         
       </div>
     )

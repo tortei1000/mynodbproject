@@ -36,6 +36,14 @@ export default class Recipes extends Component {
     }).catch(err => console.log("error", err))
   }
 
+  removeRecipe =( recipe )=> {
+    axios.delete(`/api/recipes/${recipe.id}`).then(res => {
+      this.setState({ 
+        recipes: res.data 
+      })
+    }).catch(err => console.log("error", err))
+  }
+
   render(){
     console.log("thisone", this.state.recipes)
     return(
@@ -45,7 +53,8 @@ export default class Recipes extends Component {
           return <Recipe 
                     key={recipe.id} 
                     recipe={recipe} 
-                    updateRecipe ={this.updateRecipe}/>
+                    updateRecipe ={this.updateRecipe}
+                    removeRecipe ={this.removeRecipe}/>
         })}
       </div>
     )
