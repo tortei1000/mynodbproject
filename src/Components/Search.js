@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./Search.css"
 
 export default class Search extends Component {
   constructor() {
@@ -32,8 +32,9 @@ export default class Search extends Component {
 
         <div className="Search__content">
           <input onChange={(e)=>this.handleChange(e)} placeholder="Search Your Recipes" />
-
+          <div>
           <button onClick={this.searchRecipe}>click</button>
+          </div>
         </div>
         
       </section>

@@ -20,8 +20,10 @@ export default class Header extends Component {
               <img src={logo} />
               <li className="myrecipes" onClick={() => this.props.navigate('recipes')}>My Recipes</li>
               <li className="shopping" onClick={() => this.props.navigate('cart')}>Shopping List</li>
+              <li className="search">
               <Search searchRecipe={this.props.searchRecipe} 
                     recipes ={this.props.recipes} style={{}}/>
+              </li>
             </span>
             
           </div>

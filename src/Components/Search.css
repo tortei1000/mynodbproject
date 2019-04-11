@@ -1,0 +1,13 @@
+.Search_parent{
+  position: relative;
+  right: 10px;
+}
+
+input {
+  padding:5px; 
+  border:2px solid #ccc; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px;
+}
