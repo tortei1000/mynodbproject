@@ -1,11 +1,13 @@
 .App {
   margin: 0;
   text-align: center;
-  background: #ebf1f6;
-  background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 71%, #d5ebfb 100%);
-  background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 71%,#d5ebfb 100%);
-  background: linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 50%,#89c3eb 71%,#d5ebfb 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 );
+  background: #cdeb8b;
+  background: -moz-linear-gradient(top, #cdeb8b 0%, #cdeb8b 100%);
+  background: -webkit-linear-gradient(top, #cdeb8b 0%,#cdeb8b 100%);
+  background: linear-gradient(to bottom, #cdeb8b 0%,#cdeb8b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8b', endColorstr='#cdeb8b',GradientType=0 );
+  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Indie Flower', cursive; */
   
 }
 

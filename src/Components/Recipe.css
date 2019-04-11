@@ -3,7 +3,7 @@
   border: 2px solid #0099CC;
   width: 25vw;
   height: 35vw;
-  font-size: 10px;
+  font-size: 14px;
   align-content: center;
   justify-items: center;
   background: rgb(242,245,246);
@@ -18,7 +18,7 @@
   box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.75);
   width: 35vw;
   height: 50vw;
-  font-size: 15px;
+  font-size: 20px;
   overflow: auto;
 }
 

@@ -16,20 +16,22 @@
   font-size: 24px;
 }
 .myrecipes:hover{
-  text-shadow: 2px 2px #0099CC;
+  text-shadow: 2px 2px #88b130;
+  font-size: 35px;
 }
 
 .shopping{
   display: flex;
   justify-content: center;
- 
+  
   align-content: center;
   width: 20vw;
   font-size: 24px;
 }
 
 .shopping:hover{
-  text-shadow: 2px 2px #0099CC;
+  text-shadow: 2px 2px #88b130;
+  font-size: 35px;
 }
 
 
