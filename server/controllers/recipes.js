@@ -18,6 +18,29 @@ const recipes = [
     "imageUrl":"https://www.bhg.com.au/cdnstorage/cache/b/b/d/c/b/0/xbbdcb0c3820b78995688479f1dcf81fa1c50dfaf.jpg.pagespeed.ic.XQMI5E9Num.webp",
     "directions": "fry egg on a frying pan."
   },
+  {
+    "id": id++,
+    "title":"Balsamic Ravioli",
+    "ingredient1":"1/2 cup Walnuts",
+    "ingredient2":"25 ounce Ravioli",
+    "ingredient3":"2 tbs Butter",
+    "ingredient4":"2 tbs Balsamic Vinegar",
+    "ingredient5":"1/4 cup Parmesan cheese",
+    "imageUrl":"https://images.media-allrecipes.com/userphotos/560x315/3851223.jpg",
+    "directions":"Toast walnuts in a skillet over medium heat; cook and stir until browned and fragrant, 8 to 10 minutes. Remove from skillet. Fill a pot with lightly salted water and bring to a rolling boil; stir in ravioli and return to a boil. Cook uncovered, stirring occasionally, until the ravioli float to the top and the filling is hot, 3 to 5 minutes. Drain. Warm butter in a skillet over medium heat until slightly brown, about 1 minute. Add balsamic vinegar; cook and stir until melted and combined, 1 to 2 minutes. Stir in ravioli; mix until combined. Top with walnuts and Parmesan cheese."
+  },
+  {
+    "id": id++,
+    "title":"Easy Chorizo Street Tacos",
+    "ingredient1":"1 Chorizo sausage link",
+    "ingredient2":"2 tbs chipotle peppers",
+    "ingredient3":"4 corn tortillas",
+    "ingredient4":"2 tbs chopped onion",
+    "ingredient5":"2 tbs chopped cilantro",
+    "imageUrl":"https://images.media-allrecipes.com/userphotos/560x315/4504506.jpg",
+    "directions":"Mix chorizo and chipotle peppers in adobo sauce together in a bowl. Heat a skillet over medium-high heat; add chorizo mixture and cook until crisp, 5 to 7 minutes. Transfer chorizo to a plate, reserving grease in the skillet. Heat tortillas in the reserved grease in skillet over medium heat until warmed, 1 to 2 minutes per side. Stack 2 tortillas on top of each other for each taco. Fill with chorizo, onion, and cilantro."
+
+  }
 
 ]
 

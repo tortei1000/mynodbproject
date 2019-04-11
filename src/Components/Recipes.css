@@ -1,11 +1,26 @@
 .mainDiv{
-  
+  display: flex;
+  border-bottom: 2px solid #000;
+  height: 10vw;
 }
 .secondDiv{
-  width: 100vw;
-  height: 5vw;
-  border: 1px solid rebeccapurple;
-  font-size: 30px;
+  position: relative;
+  top: 1px;
+  height: 10vw;
+}
+
+.createFormParent{
   display: flex;
-  align-content: space-between;
+  flex-direction: column;
+  position: relative;
+  top: 12vw;
+  left: 1px;
+}
+
+.recipeParent{
+  display: flex;
+  position: relative;
+  top: 12vw;
+  flex-wrap: initial;
+
 }

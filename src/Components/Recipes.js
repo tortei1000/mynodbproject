@@ -64,14 +64,21 @@ export default class Recipes extends Component {
             <Header searchRecipe={this.searchRecipe} 
               recipes={this.recipes} />
           </div>
+          <div className="createFormParent">
           <CreateRecipeForm handleCreate = {this.createRecipe}/> 
+          </div>
             {this.state.recipes.map(recipe => {
-            return <Recipe 
+            return  (
+                    <div className="recipeParent">
+                    <Recipe 
                     key={recipe.id} 
                     recipe={recipe} 
                     updateRecipe ={this.updateRecipe}
                     removeRecipe ={this.removeRecipe}/>
+                    </div>
+            )
         })}
+          
       </div>
     )
   }

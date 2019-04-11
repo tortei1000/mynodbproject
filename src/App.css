@@ -1,7 +1,7 @@
 .App {
   height: 100vw;
   margin: 0;
-  border: 0;
+  border: 1px solid black;
   text-align: center;
   background: #ebf1f6;
   background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 71%, #d5ebfb 100%);
