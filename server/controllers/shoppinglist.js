@@ -1,7 +1,8 @@
+
 const shoppingList = []
 
 module.exports = {
-   get: (req, res) => {
+  get: (req, res) => {
     res.send(shoppingList)
   },
 
@@ -13,5 +14,11 @@ module.exports = {
     res.send(shoppingList)
     console.log(shoppingList, "after")
   },
+  delete: (req, res) => {
+    let {id} = req.params;
+    let index = items.findIndex(item => +item.id === +id)
+    items.splice(index, 1)
+    res.send(items)
+  }
 }
 

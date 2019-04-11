@@ -92,6 +92,22 @@ export default class Recipes extends Component {
     }
   }
 
+  itemRemover =(item) => {
+    axios.delete(`/api/recipes/${item.id}`, item).then(res => {
+    this.setState({
+      recipes: res.data
+    })
+  }).catch(err => console.log("error", err))
+  }
+  removeItem= (e) => {
+    console.log(e.target.id)
+    let arr2 = [...this.state.items]
+    arr2.splice([e.target.id], 1)
+    this.setState({items: arr2})
+    // this.itemRemover(e.target.innerHtml)
+    
+  }
+
   render() {
 
     return (
@@ -104,8 +120,13 @@ export default class Recipes extends Component {
         <div className="bigcontainer">
 
 
-          {this.state.showCart ? this.state.items.map((item) => {
-            return <ul className="listItems">{item}</ul>
+          {this.state.showCart ? this.state.items.map((item, i) => {
+            return (
+            <div>
+              <ul id={i} onClick={(e)=>this.removeItem(e)} className="listItems">{item}</ul>
+              
+            </div>
+            )
           }) :
 
             <div className="createFormParent">
@@ -118,7 +139,8 @@ export default class Recipes extends Component {
                       recipe={recipe}
                       updateRecipe={this.updateRecipe}
                       removeRecipe={this.removeRecipe}
-                      addItems={this.addItems} />
+                      addItems={this.addItems}
+                       />
                   </div>
                 )
 
