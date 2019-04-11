@@ -1,3 +1,11 @@
+.createFormParent{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 12vw;
+  left: 1px;
+}
+
 .mainDivinCreate{
  display: flex;
  border: 1px solid black;
@@ -23,12 +31,7 @@
   left: 1px;
 }
 
-.fewerElements:hover{
-  box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.75);
-  width: 30vw;
-  height: 60vw;
-  font-size: 15px;
-}
+
 
 .itemCtrl{
   
@@ -50,9 +53,9 @@
 }
 
 .imageonCreate{
-  width: 19vw;
+  width: 7vw;
   margin: 2px;
-  height: 19vw;
+  height: 7vw;
 
 }
 .headername{

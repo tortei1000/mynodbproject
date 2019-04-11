@@ -1,12 +1,14 @@
 .mainDiv{
   display: flex;
-  border-bottom: 2px solid #000;
-  height: 10vw;
+  flex-wrap: wrap;
+  width: 100vw;
 }
-.secondDiv{
+.HeaderDiv{
   position: relative;
   top: 1px;
   height: 10vw;
+  width: 100vw;
+  border-bottom: 2px solid #000;
 }
 
 .createFormParent{
@@ -20,7 +22,9 @@
 .recipeParent{
   display: flex;
   position: relative;
+  left: 3vw;
   top: 12vw;
   flex-wrap: initial;
+
 
 }

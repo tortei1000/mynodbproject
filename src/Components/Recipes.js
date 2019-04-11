@@ -60,7 +60,7 @@ export default class Recipes extends Component {
     console.log("thisone", this.state.recipes)
     return(
         <div className="mainDiv">
-          <div className="secondDiv">
+          <div className="HeaderDiv">
             <Header searchRecipe={this.searchRecipe} 
               recipes={this.recipes} />
           </div>
