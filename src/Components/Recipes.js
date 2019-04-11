@@ -98,7 +98,7 @@ export default class Recipes extends Component {
 
 
           {this.state.showCart ? this.state.items.map((item) => {
-            return <ul>{item}</ul>
+            return <ul className="listItems">{item}</ul>
           }) :
 
             <div className="createFormParent">

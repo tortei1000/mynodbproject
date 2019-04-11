@@ -29,13 +29,17 @@ export default class Recipe extends Component {
           <img className="imageInRecipe" src={recipe.imageUrl} />
           <h2>{recipe.title}</h2>
           <h3>ingredients:</h3>
+          <div className="ingredientAlign">
           <p>{recipe.ingredient1}</p>
           <p>{recipe.ingredient2}</p>
           <p>{recipe.ingredient3}</p>
           <p>{recipe.ingredient4}</p>
           <p>{recipe.ingredient5}</p>
-          <h3>Directions:</h3>
+          </div>
+          <h3>directions:</h3>
+          <div className="directionsAlign">
           <p>{recipe.directions}</p>
+          </div>
           <div><button className="bottomButton" onClick={this.toggleEdit}>edit</button>
           <button className="bottomButton" onClick={() => this.props.removeRecipe(recipe)}>Delete</button>
           </div>

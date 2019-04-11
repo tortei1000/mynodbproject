@@ -53,3 +53,13 @@
   background-color: #008CBA;
   color: white;
 }
+
+.ingredientAlign{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.directionsAlign{
+  text-align: left;
+  margin-left: 20px;
+}

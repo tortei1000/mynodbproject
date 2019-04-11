@@ -1,9 +1,9 @@
 .editHeader{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   list-style: none;
-  margin-right: 100px;
+  
   text-align: center;
   border-bottom: 4px double #000;
   height: 8vw;
