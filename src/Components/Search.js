@@ -33,7 +33,7 @@ export default class Search extends Component {
         <div className="Search__content">
           <input onChange={(e)=>this.handleChange(e)} placeholder="Search Your Recipes" />
           <div>
-          <button onClick={this.searchRecipe}>click</button>
+          <button className="bottomButton2" onClick={this.searchRecipe}>click</button>
           </div>
         </div>
         
