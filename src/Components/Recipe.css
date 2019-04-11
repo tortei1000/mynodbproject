@@ -40,3 +40,16 @@
   background-color: #008CBA;
   color: white;
 }
+
+.bottomButton2{
+  color: #0099CC; 
+  background: transparent;
+  border: 2px solid #0099CC;
+  border-radius: 6px; 
+  height: 40px;
+  width: 130px;
+}
+.bottomButton2:hover{
+  background-color: #008CBA;
+  color: white;
+}
