@@ -1,18 +1,3 @@
-.createFormParent{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 12vw;
-  left: 1px;
-}
-
-.mainDivinCreate{
- display: flex;
- border: 1px solid black;
- height: 10vw;
- justify-content: left;
-
-}
 .fewerElements{
   margin: 5px;
   border: 2px solid #0099CC;
@@ -29,14 +14,7 @@
   overflow: hidden;
   position: relative;
   left: 1px;
-}
-
-
-
-.itemCtrl{
-  
-  
-  
+  border-radius: 30px;
 }
 
 .bottomButton{
@@ -56,8 +34,5 @@
   width: 7vw;
   margin: 2px;
   height: 7vw;
-
-}
-.headername{
 
 }
