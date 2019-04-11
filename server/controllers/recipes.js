@@ -27,8 +27,8 @@ module.exports = {
     res.send(recipes)
   },
   getRecById: (req, res) => {
-    let {id} = req.params;
-    res.send(recipes.find(recipe => +recipe.id === +id))
+    let {text} = req.query;
+    res.send(recipes.find(recipe => recipe.title === text))
   },
   create: (req, res) => {
     let recipe = req.body;

@@ -26,7 +26,7 @@ export default class Recipe extends Component {
        this.state.edit ? <EditRecipeForm recipe={recipe} updateRecipe={this.props.updateRecipe} toggleEdit={this.toggleEdit}/> :
       <div className="mainRecipeBody" style={{border: "1px solid black", margin: 10,}}>
         <img src={recipe.imageUrl} alt="" width="300"/>
-        <h2>Title: {recipe.title}</h2>
+        <h2>{recipe.title}</h2>
         <h3>ingredients:</h3>
         <p>{recipe.ingredient1}</p>
         <p>{recipe.ingredient2}</p>

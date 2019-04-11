@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import axios from "axios"
 import Recipe from "./Recipe"
 import CreateRecipeForm from "./CreateRecipeForm"
+import Header from "./Header";
 
 export default class Recipes extends Component {
   constructor() {
@@ -44,11 +45,23 @@ export default class Recipes extends Component {
     }).catch(err => console.log("error", err))
   }
 
+  searchRecipe = (text) => {
+    axios.get(`/api/recipes/${text}`).then( res => {
+      console.log(res) 
+      this.setState({
+        recipes:res.data
+      })
+    }).catch(err => console.log("error", err))
+
+  }
+
   render(){
     console.log("thisone", this.state.recipes)
     return(
         <div>
-         <CreateRecipeForm handleCreate = {this.createRecipe}/> 
+        <Header searchRecipe={this.searchRecipe} 
+        recipes={this.recipes} />
+        <CreateRecipeForm handleCreate = {this.createRecipe}/> 
         {this.state.recipes.map(recipe => {
           return <Recipe 
                     key={recipe.id} 
