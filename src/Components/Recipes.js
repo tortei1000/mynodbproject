@@ -10,7 +10,8 @@ export default class Recipes extends Component {
     super()
 
     this.state={
-      recipes: []
+      recipes: [],
+      items: []
     }
   }
 
@@ -49,15 +50,32 @@ export default class Recipes extends Component {
   }
 
   searchRecipe = (text) => {
-    console.log("searchRecipe function", text)
+   
     axios.get(`/api/recipes/?title=${text}`).then( res => {
-      console.log("search function result", res) 
+      
       this.setState({
         recipes:res.data
       })
     }).catch(err => console.log("error", err))
 
   }
+
+  createList = (newItem) => {
+    axios.post("/api/list", newItem).then(res => {
+      this.setState({
+        items: res.data
+      })
+    }).catch(err => console.log("error", err))
+  }
+
+  addItems = (ing) => {
+    console.log(ing)
+    
+    this.setState({
+      items :[...this.state.items, ...ing]
+    })
+  }
+
 
   render(){
     
@@ -66,6 +84,11 @@ export default class Recipes extends Component {
           <div className="HeaderDiv">
             <Header searchRecipe={this.searchRecipe} 
               recipes={this.recipes} />
+          </div>
+          <div className="bigcontainer">
+            {this.state.items.map((item)=>{
+              return <ul>{item}</ul>
+            })}
           </div>
           <div className="createFormParent">
           <CreateRecipeForm handleCreate = {this.createRecipe}/> 
@@ -77,7 +100,8 @@ export default class Recipes extends Component {
                     key={recipe.id} 
                     recipe={recipe} 
                     updateRecipe ={this.updateRecipe}
-                    removeRecipe ={this.removeRecipe}/>
+                    removeRecipe ={this.removeRecipe}
+                    addItems ={this.addItems}/>
                     </div>
             )
         })}
