@@ -76,11 +76,13 @@ class CreateRecipeForm extends Component {
         onChange={this.handleChange}  
         type="text" 
         placeholder="ingredient"/>
-        <input 
+        <div>
+        <textarea cols="30" rows="8"
         name="directions" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="directions"/>
+        placeholder="This text box is provided to you by Alex. directions"/>
+        </div>
         </div>
         <button className="bottomButton" onClick={this.handleClick} >create new recipe</button>
         </div>

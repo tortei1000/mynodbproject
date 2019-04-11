@@ -1,10 +1,4 @@
-let id = 1;
-const shoppingList = [
-  {
-    "id": id++,
-    "item": ""  
-  }
-]
+const shoppingList = []
 
 module.exports = {
    get: (req, res) => {
@@ -12,10 +6,12 @@ module.exports = {
   },
 
   create: (req, res) => {
-    let item = req.body;
-    item.id = id++;
-    shoppingList.push(item)
+    console.log(shoppingList, "before")
+    req.body.map((object)=>{
+      shoppingList.push(object)
+    })
     res.send(shoppingList)
+    console.log(shoppingList, "after")
   },
 }
 

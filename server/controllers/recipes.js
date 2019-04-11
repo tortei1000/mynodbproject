@@ -71,7 +71,6 @@ module.exports = {
   },
   delete: (req, res) => {
     let {id} = req.params;
-    console.log("string", id)
     let index = recipes.findIndex(recipe => +recipe.id === +id)
     recipes.splice(index, 1)
     res.send(recipes)

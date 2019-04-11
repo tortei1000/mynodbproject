@@ -22,6 +22,11 @@ export default class Recipes extends Component {
         recipes: res.data
       })
     }).catch(err => console.log("error", err))
+    axios.get("/api/list").then((res)=>{
+      this.setState({
+        items: res.data
+      })
+    }).catch(err => console.log("error", err))
   }
 
   createRecipe = (newRecipe) => {
@@ -61,8 +66,9 @@ export default class Recipes extends Component {
 
   }
 
-  createList = (newItem) => {
-    axios.post("/api/list", newItem).then(res => {
+  createList = (ing) => {
+    console.log("this create", ing)
+    axios.post("/api/list", ing).then(res => {
       this.setState({
         items: res.data
       })
@@ -70,11 +76,12 @@ export default class Recipes extends Component {
   }
 
   addItems = (ing) => {
-    console.log(ing)
-
-    this.setState({
+    console.log(ing, "additems")
+      this.setState({
       items: [...this.state.items, ...ing]
     })
+    this.createList(ing)
+    
   }
 
   navigate = (location) => {
