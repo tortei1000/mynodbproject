@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import "./EditRecipeForm.css"
+
 
 export default class EditRecipeForm extends Component {
 
@@ -35,50 +37,52 @@ export default class EditRecipeForm extends Component {
 
   render(){
     return(
-      <div className="mainDiv" style={{border: "1px solid black", margin: 20}}>
+      <div className="mainDivinEdit" >
         <h2>Edit this recipe</h2>
+        
         <input 
         name="title" 
         onChange={this.handleChange} 
         type="text" 
-        placeholder="title"/>
+        placeholder={this.state.title}/>
         <input 
         name="imageUrl" 
         onChange={this.handleChange} 
         type="text" 
-        placeholder="image url"/>
+        placeholder={this.state.imageUrl}/>
         <input 
         name="ingredient1" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"/>
+        placeholder={this.state.ingredient1}/>
         <input 
         name="ingredient2" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"/>
+        placeholder={this.state.ingredient2}/>
         <input 
         name="ingredient3" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"/>
+        placeholder={this.state.ingredient3}/>
         <input 
         name="ingredient4" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"/>
+        placeholder={this.state.ingredient4}/>
         <input 
         name="ingredient5" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="ingredient"/>
+        placeholder={this.state.ingredient5}/>
         <input 
         name="directions" 
         onChange={this.handleChange}  
         type="text" 
-        placeholder="directions"/>
+        placeholder={this.state.directions}/>
         <button className="bottomButton" onClick={this.handleClick} >update recipe</button>
         <button className="bottomButton" onClick={this.props.toggleEdit}> Cancel</button>
+        
       </div>
     )
   }

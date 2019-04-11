@@ -20,8 +20,9 @@ export default class Recipe extends Component {
 
   render(){
     let {recipe} = this.props
+    
 
-      console.log(recipe.ingredient)
+      
     return(
        this.state.edit ? <EditRecipeForm recipe={recipe} updateRecipe={this.props.updateRecipe} toggleEdit={this.toggleEdit}/> :
       <div className="mainRecipeBody">
@@ -36,7 +37,7 @@ export default class Recipe extends Component {
         <h3>Directions:</h3>
         <p>{recipe.directions}</p>
         <button className="bottomButton" onClick={this.toggleEdit}>edit</button>
-        <button className="bottomButton" onClick={this.props.removeRecipe}>Delete</button>
+        <button className="bottomButton" onClick={()=>this.props.removeRecipe(recipe)}>Delete</button>
         
       </div>
     )

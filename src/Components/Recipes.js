@@ -31,6 +31,7 @@ export default class Recipes extends Component {
   }
 
   updateRecipe = (recipe) => {
+    
     axios.put(`/api/recipes/${recipe.id}`, recipe).then(res => {
       this.setState({
         recipes:res.data
@@ -39,6 +40,7 @@ export default class Recipes extends Component {
   }
 
   removeRecipe =( recipe )=> {
+    console.log("this is the recipe id", recipe.id)
     axios.delete(`/api/recipes/${recipe.id}`).then(res => {
       this.setState({ 
         recipes: res.data 
@@ -47,8 +49,9 @@ export default class Recipes extends Component {
   }
 
   searchRecipe = (text) => {
-    axios.get(`/api/recipes/${text}`).then( res => {
-      console.log(res) 
+    console.log("searchRecipe function", text)
+    axios.get(`/api/recipes/?title=${text}`).then( res => {
+      console.log("search function result", res) 
       this.setState({
         recipes:res.data
       })
@@ -57,7 +60,7 @@ export default class Recipes extends Component {
   }
 
   render(){
-    console.log("thisone", this.state.recipes)
+    
     return(
         <div className="mainDiv">
           <div className="HeaderDiv">

@@ -7,7 +7,6 @@ app.use(express.json())
 
 
 app.get("/api/recipes", RecipesCtrl.get)
-app.get("/api/recipes/:id", RecipesCtrl.getRecById)
 app.post("/api/recipes", RecipesCtrl.create)
 app.put("/api/recipes/:id", RecipesCtrl.update)
 app.delete("/api/recipes/:id", RecipesCtrl.delete)

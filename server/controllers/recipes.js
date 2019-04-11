@@ -46,13 +46,15 @@ const recipes = [
 
 module.exports = {
   get: (req, res) => {
-    console.log(recipes)
+    if(req.query.title){
+      let {title} = req.query;
+        res.send(recipes.filter(recipe => recipe.title.includes(title)))
+      } else {
+    
     res.send(recipes)
+    }
   },
-  getRecById: (req, res) => {
-    let {text} = req.query;
-    res.send(recipes.find(recipe => recipe.title === text))
-  },
+ 
   create: (req, res) => {
     let recipe = req.body;
     recipe.id = id++;
@@ -69,8 +71,9 @@ module.exports = {
   },
   delete: (req, res) => {
     let {id} = req.params;
+    console.log("string", id)
     let index = recipes.findIndex(recipe => +recipe.id === +id)
-    recipes.splice(index-1, 1)
+    recipes.splice(index, 1)
     res.send(recipes)
   }
 }

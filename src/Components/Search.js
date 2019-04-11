@@ -17,6 +17,7 @@ export default class Search extends Component {
   searchRecipe(){
       
     this.props.searchRecipe(this.state.filterText)
+    console.log("search method", this.state.filterText)
     
   };
   
@@ -32,7 +33,7 @@ export default class Search extends Component {
         <div className="Search__content">
           <input onChange={(e)=>this.handleChange(e)} placeholder="Search Your Recipes" />
 
-          {/* <button onClick={this.searchRecipe}>click</button> */}
+          <button onClick={this.searchRecipe}>click</button>
         </div>
         
       </section>
