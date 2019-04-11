@@ -16,7 +16,13 @@ export default class Header extends Component {
           {/* Displays LOGO */}
           <div className="Header__company-info">
             
-            <h1>Pantrify</h1>
+            <span>
+              <h1>Pantrify</h1>
+              <li onClick={() => this.props.navigate('recipes')}>My Recipes</li>
+              <li onClick={() => this.props.navigate('cart')}>Shopping List Cart</li>
+            
+            </span>
+            
           </div>
 
           {/* Displays the search bar */}
