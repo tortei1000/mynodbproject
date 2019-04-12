@@ -48,7 +48,7 @@ export default class Recipes extends Component {
   }
 
   removeRecipe = (recipe) => {
-    console.log("this is the recipe id", recipe.id)
+    
     axios.delete(`/api/recipes/${recipe.id}`).then(res => {
       this.setState({
         recipes: res.data
@@ -75,15 +75,7 @@ export default class Recipes extends Component {
     }).catch(err => console.log("error", err))
   }
 
-  // addItems = (ing) => {
-  //   console.log(ing, "additems")
-  //     this.setState({
-  //     items: [...this.state.items, ...ing]
-  //   })
-    
-  //   this.createList(ing)
-    
-  // }
+  
 
   navigate = (location) => {
     if (location === "cart") {
@@ -94,21 +86,12 @@ export default class Recipes extends Component {
   }
 
   itemRemover =(item) => {
-    
-    axios.delete(`/api/list`, {item}).then(res => {
-      console.log(res.data)
-    this.setState({
-      recipes: res.data
-    })
+    axios.delete(`/api/list/${item.id}`).then(res => {
+      console.log("where am I?", this.state.items, "whats my id ", item.id)
+      this.setState({
+        items : res.data
+      })
   }).catch(err => console.log("error", err))
-  }
-  removeItem= (e, item) => {
-    console.log("this one", e.target)
-    let arr2 = [...this.state.items]
-    arr2.splice([e.target.id], 1)
-    this.setState({items: arr2})
-    this.itemRemover(item)
-    
   }
 
   render() {
@@ -126,7 +109,7 @@ export default class Recipes extends Component {
           {this.state.showCart ? this.state.items.map((item, i) => {
             return (
             <div>
-              <ul id={i} onClick={(e)=>this.removeItem(e,item)} className="listItems">{item.item}</ul>
+              <ul id={i} onClick={()=>this.itemRemover(item)} className="listItems">{item.item}</ul>
               
             </div>
             )

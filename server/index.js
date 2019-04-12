@@ -13,7 +13,7 @@ app.put("/api/recipes/:id", RecipesCtrl.update)
 app.delete("/api/recipes/:id", RecipesCtrl.delete)
 app.get("/api/list", ShopCtrl.get)
 app.post("/api/list", ShopCtrl.create)
-app.delete("/api/list", ShopCtrl.delete)
+app.delete("/api/list/:id", ShopCtrl.delete)
 
 app.listen(port, ()=>{
   console.log("I am listening at port", port)
