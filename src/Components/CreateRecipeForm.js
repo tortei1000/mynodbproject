@@ -39,7 +39,6 @@ class CreateRecipeForm extends Component {
       <div className="mainDivinCreate">
         <div className="fewerElements">
         <h2 className="headername">Create your recipe</h2>
-        <img className="imageonCreate" src="http://sourcehomeobject.com/site_files/11951/upload_images/blog/c952c172ed213b288c8365b126a3dfc5.png" width="300" />
         <div className="itemCtrl">
         <input 
         name="title" 

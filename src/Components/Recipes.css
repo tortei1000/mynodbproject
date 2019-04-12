@@ -13,11 +13,11 @@
   
   align-content: center;
   width: 20vw;
-  font-size: 24px;
+  font-size: 28px;
 }
 .myrecipes:hover{
   text-shadow: 2px 2px #88b130;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .shopping{
@@ -26,12 +26,12 @@
   
   align-content: center;
   width: 20vw;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .shopping:hover{
   text-shadow: 2px 2px #88b130;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 

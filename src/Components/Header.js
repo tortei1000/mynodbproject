@@ -17,7 +17,7 @@ export default class Header extends Component {
           <div className="Header__company-info">
             
             <span className="editHeader">
-              <img src={logo} />
+              <img src={logo} onClick={() => this.props.navigate('recipes')} />
               <li className="myrecipes" onClick={() => this.props.navigate('recipes')}>My Recipes</li>
               <li className="shopping" onClick={() => this.props.navigate('cart')}>Shopping List</li>
               <li className="search">

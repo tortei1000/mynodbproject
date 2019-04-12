@@ -38,8 +38,8 @@ export default class EditRecipeForm extends Component {
   render(){
     return(
       <div className="mainDivinEdit" >
-        <h2>Edit this recipe</h2>
-        
+        <h2 className="edit">Edit this recipe</h2>
+        <div className="inputBoxes">
         <input 
         name="title" 
         onChange={this.handleChange} 
@@ -80,9 +80,11 @@ export default class EditRecipeForm extends Component {
         onChange={this.handleChange}  
         type="text" 
         placeholder={this.state.directions}/>
+        </div>
+        <div className="buttonEdit">
         <button className="bottomButton" onClick={this.handleClick} >update recipe</button>
         <button className="bottomButton" onClick={this.props.toggleEdit}> Cancel</button>
-        
+        </div>
       </div>
     )
   }
