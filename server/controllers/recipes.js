@@ -62,6 +62,17 @@ const recipes = [
     "ingredient5":"",
     "imageUrl":"https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,w_560,h_315/v1/img/recipes/42/03/98/picFV7OMs.jpg",
     "directions": "Empty the ice cubes that are left in the trays (if there are any left) into the bin. Take the trays over to the sink and fill them with cold water. (Hot water will freeze faster and more clear). Place the water filled ice trays back in the freezer. Replace the ice bin if you had to remove it. Shut the door to the freezer. Be sure to leave for around 4-6 hours at least to make sure it is frozen. If you want to experiment, you can freeze things like fruit infused waters or juices."
+  },
+  {
+    "id": id++,
+    "title":"Chicken Cordon Bleu",
+    "ingredient1":"4 chicken breasts",
+    "ingredient2":"1/4 tsp salt",
+    "ingredient3":"1/8 tsp black pepper",
+    "ingredient4":"6 slices swiss cheese",
+    "ingredient5":"4 slices hame",
+    "imageUrl":"https://images.media-allrecipes.com/userphotos/560x315/3508202.jpg",
+    "directions": "Preheat oven to 350 degrees F (175 degrees C). Coat a 7x11 inch baking dish with nonstick cooking spray. Pound chicken breasts to 1/4 inch thickness. Sprinkle each piece of chicken on both sides with salt and pepper. Place 1 cheese slice and 1 ham slice on top of each breast. Roll up each breast, and secure with a toothpick. Place in baking dish, and sprinkle chicken evenly with bread crumbs. Bake for 30 to 35 minutes, or until chicken is no longer pink. Remove from oven, and place 1/2 cheese slice on top of each breast. Return to oven for 3 to 5 minutes, or until cheese has melted. Remove toothpicks, and serve immediately."
   }
 
 ]
