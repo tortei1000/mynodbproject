@@ -40,6 +40,28 @@ const recipes = [
     "imageUrl":"https://images.media-allrecipes.com/userphotos/560x315/4504506.jpg",
     "directions":"Mix chorizo and chipotle peppers in adobo sauce together in a bowl. Heat a skillet over medium-high heat; add chorizo mixture and cook until crisp, 5 to 7 minutes. Transfer chorizo to a plate, reserving grease in the skillet. Heat tortillas in the reserved grease in skillet over medium heat until warmed, 1 to 2 minutes per side. Stack 2 tortillas on top of each other for each taco. Fill with chorizo, onion, and cilantro."
 
+  },
+  {
+    "id": id++,
+    "title":"Salsa Chicken",
+    "ingredient1":"4 chicken breasts",
+    "ingredient2":"4 tsp taco seasoning",
+    "ingredient3":"1 cup salsa",
+    "ingredient4":"1 cup shredded cheddar cheese",
+    "ingredient5":"2 tbsp sour cream",
+    "imageUrl":"https://images.media-allrecipes.com/userphotos/560x315/4487510.jpg",
+    "directions": "Preheat oven to 375 degrees F (190 degrees C). Place chicken breasts in a lightly greased 9x13 inch baking dish. Sprinkle taco seasoning on both sides of chicken breasts, and pour salsa over all. Bake at 375 degrees F (190 degrees C) for 25 to 35 minutes, or until chicken is tender and juicy and its juices run clear. Sprinkle chicken evenly with cheese, and continue baking for an additional 3 to 5 minutes, or until cheese is melted and bubbly. Top with sour cream if desired, and serve."
+  },
+  {
+    "id": id++,
+    "title":"Ice Cube",
+    "ingredient1":"2 cups water",
+    "ingredient2":"2 tbsp water",
+    "ingredient3":"",
+    "ingredient4":"",
+    "ingredient5":"",
+    "imageUrl":"https://img.sndimg.com/food/image/upload/fl_progressive,c_fill,q_80,w_560,h_315/v1/img/recipes/42/03/98/picFV7OMs.jpg",
+    "directions": "Empty the ice cubes that are left in the trays (if there are any left) into the bin. Take the trays over to the sink and fill them with cold water. (Hot water will freeze faster and more clear). Place the water filled ice trays back in the freezer. Replace the ice bin if you had to remove it. Shut the door to the freezer. Be sure to leave for around 4-6 hours at least to make sure it is frozen. If you want to experiment, you can freeze things like fruit infused waters or juices."
   }
 
 ]
