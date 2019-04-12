@@ -4,7 +4,7 @@ import Recipe from "./Recipe"
 import CreateRecipeForm from "./CreateRecipeForm"
 import Header from "./Header";
 import "./Recipes.css"
-import {ToastsContainer, ToastsStore} from 'react-toasts';
+import { toast } from 'react-toastify';
 
 export default class Recipes extends Component {
   constructor() {
@@ -32,6 +32,7 @@ export default class Recipes extends Component {
 
   createRecipe = (newRecipe) => {
     axios.post("/api/recipes", newRecipe).then(res => {
+      toast.success(`${newRecipe.title} added`)
       this.setState({
         recipes: res.data
       })
@@ -41,6 +42,7 @@ export default class Recipes extends Component {
   updateRecipe = (recipe) => {
 
     axios.put(`/api/recipes/${recipe.id}`, recipe).then(res => {
+      toast.success(`recipe edited`)
       this.setState({
         recipes: res.data
       })
@@ -50,6 +52,7 @@ export default class Recipes extends Component {
   removeRecipe = (recipe) => {
     
     axios.delete(`/api/recipes/${recipe.id}`).then(res => {
+      toast.success(`${recipe.title} removed`)
       this.setState({
         recipes: res.data
       })
@@ -69,9 +72,11 @@ export default class Recipes extends Component {
 
   createList = (ing) => {
     axios.post("/api/list", ing).then(res => {
+      toast.success(`added ingredients to shopping list.`)
       this.setState({
         items: res.data
       })
+      
     }).catch(err => console.log("error", err))
   }
 
@@ -87,7 +92,7 @@ export default class Recipes extends Component {
 
   itemRemover =(item) => {
     axios.delete(`/api/list/${item.id}`).then(res => {
-      console.log("where am I?", this.state.items, "whats my id ", item.id)
+      toast.success(`removed ingredient from your shopping list`)
       this.setState({
         items : res.data
       })
@@ -99,6 +104,7 @@ export default class Recipes extends Component {
     return (
 
       <div className="mainDiv">
+      
         <div className="HeaderDiv">
           <Header searchRecipe={this.searchRecipe}
             recipes={this.recipes} navigate={this.navigate} />
@@ -136,6 +142,7 @@ export default class Recipes extends Component {
 
             </div>}
             </div>
+            
             </div>
     )
   }
