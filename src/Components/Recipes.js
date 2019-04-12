@@ -4,6 +4,7 @@ import Recipe from "./Recipe"
 import CreateRecipeForm from "./CreateRecipeForm"
 import Header from "./Header";
 import "./Recipes.css"
+import {ToastsContainer, ToastsStore} from 'react-toasts';
 
 export default class Recipes extends Component {
   constructor() {
@@ -67,7 +68,6 @@ export default class Recipes extends Component {
   }
 
   createList = (ing) => {
-    console.log("this create", ing)
     axios.post("/api/list", ing).then(res => {
       this.setState({
         items: res.data
@@ -75,14 +75,15 @@ export default class Recipes extends Component {
     }).catch(err => console.log("error", err))
   }
 
-  addItems = (ing) => {
-    console.log(ing, "additems")
-      this.setState({
-      items: [...this.state.items, ...ing]
-    })
-    this.createList(ing)
+  // addItems = (ing) => {
+  //   console.log(ing, "additems")
+  //     this.setState({
+  //     items: [...this.state.items, ...ing]
+  //   })
     
-  }
+  //   this.createList(ing)
+    
+  // }
 
   navigate = (location) => {
     if (location === "cart") {
@@ -93,18 +94,20 @@ export default class Recipes extends Component {
   }
 
   itemRemover =(item) => {
-    axios.delete(`/api/recipes/${item.id}`, item).then(res => {
+    
+    axios.delete(`/api/list`, {item}).then(res => {
+      console.log(res.data)
     this.setState({
       recipes: res.data
     })
   }).catch(err => console.log("error", err))
   }
-  removeItem= (e) => {
-    console.log(e.target.id)
+  removeItem= (e, item) => {
+    console.log("this one", e.target)
     let arr2 = [...this.state.items]
     arr2.splice([e.target.id], 1)
     this.setState({items: arr2})
-    // this.itemRemover(e.target.innerHtml)
+    this.itemRemover(item)
     
   }
 
@@ -123,7 +126,7 @@ export default class Recipes extends Component {
           {this.state.showCart ? this.state.items.map((item, i) => {
             return (
             <div>
-              <ul id={i} onClick={(e)=>this.removeItem(e)} className="listItems">{item}</ul>
+              <ul id={i} onClick={(e)=>this.removeItem(e,item)} className="listItems">{item.item}</ul>
               
             </div>
             )
@@ -140,6 +143,7 @@ export default class Recipes extends Component {
                       updateRecipe={this.updateRecipe}
                       removeRecipe={this.removeRecipe}
                       addItems={this.addItems}
+                      createList={this.createList}
                        />
                   </div>
                 )

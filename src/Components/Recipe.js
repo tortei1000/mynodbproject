@@ -43,7 +43,7 @@ export default class Recipe extends Component {
           <div><button className="bottomButton" onClick={this.toggleEdit}>edit</button>
           <button className="bottomButton" onClick={() => this.props.removeRecipe(recipe)}>Delete</button>
           </div>
-          <button className="bottomButton2" onClick={()=> this.props.addItems([recipe.ingredient1,recipe.ingredient2,recipe.ingredient3,recipe.ingredient4,recipe.ingredient5])} >Add ingredients to shopping list</button>
+          <button className="bottomButton2" onClick={()=> this.props.createList(recipe)} >Add ingredients to shopping list</button>
 
         </div>
     )
