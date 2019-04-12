@@ -13,6 +13,16 @@
   overflow: hidden;
   border-radius: 30px;
 }
+
+
+
+.mainRecipeBody::-webkit-scrollbar {
+  display: none;
+ 
+}
+
+
+
 .mainRecipeBody:hover{
   box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.75);
   overflow: auto;
