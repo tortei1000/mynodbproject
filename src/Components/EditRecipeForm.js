@@ -8,6 +8,7 @@ export default class EditRecipeForm extends Component {
     super(props)
 
     this.state = {
+      id: props.recipe.id,
       title: props.recipe.title,
       imageUrl: props.recipe.imageUrl,
       ingredient1: props.recipe.ingredient1,
@@ -33,6 +34,7 @@ export default class EditRecipeForm extends Component {
   handleClick = () => {
     let newRecipe = this.state
     this.props.updateRecipe(newRecipe)
+    this.props.toggleEdit()
   }
 
   render(){

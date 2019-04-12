@@ -40,7 +40,7 @@ export default class Recipes extends Component {
   }
 
   updateRecipe = (recipe) => {
-
+      console.log("update", recipe)
     axios.put(`/api/recipes/${recipe.id}`, recipe).then(res => {
       toast.success(`recipe edited`)
       this.setState({
