@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Recipe.css"
 import EditRecipeForm from "./EditRecipeForm"
+import axios from "axios"
 
 export default class Recipe extends Component {
   constructor() {
@@ -12,6 +13,7 @@ export default class Recipe extends Component {
     }
   }
 
+  
   toggleEdit = () => {
     this.setState({
       edit: !this.state.edit
@@ -29,6 +31,7 @@ export default class Recipe extends Component {
           <img className="imageInRecipe" src={recipe.imageUrl} />
           <h2>{recipe.title}</h2>
           <h3>ingredients:</h3>
+          
           <div className="ingredientAlign">
           <p>{recipe.ingredient1}</p>
           <p>{recipe.ingredient2}</p>
@@ -40,6 +43,7 @@ export default class Recipe extends Component {
           <div className="directionsAlign">
           <p>{recipe.directions}</p>
           </div>
+          
           <div><button className="bottomButton" onClick={this.toggleEdit}>edit</button>
           <button className="bottomButton" onClick={() => this.props.removeRecipe(recipe)}>Delete</button>
           </div>
