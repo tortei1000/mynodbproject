@@ -44,9 +44,7 @@
   
 }
 
-.bigcontainer{
- 
-}
+
 
 .createFormParent{
   display: flex;
@@ -59,4 +57,10 @@
   text-align: left;
   font-size: 20px;
   
+}
+
+.calendarDrop{
+  width: 23vw;
+  height: 400px;
+  margin: 12px;
 }

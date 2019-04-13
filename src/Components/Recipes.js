@@ -5,6 +5,7 @@ import CreateRecipeForm from "./CreateRecipeForm"
 import Header from "./Header";
 import "./Recipes.css"
 import { toast } from 'react-toastify';
+import Calendar from "./Calendar";
 
 export default class Recipes extends Component {
   constructor() {
@@ -23,7 +24,7 @@ export default class Recipes extends Component {
         recipes: res.data
       })
     }).catch(err => console.log("error", err))
-    axios.get("/api/list").then((res)=>{
+    axios.get("/api/list").then((res) => {
       this.setState({
         items: res.data
       })
@@ -40,7 +41,7 @@ export default class Recipes extends Component {
   }
 
   updateRecipe = (recipe) => {
-      console.log("update", recipe)
+    console.log("update", recipe)
     axios.put(`/api/recipes/${recipe.id}`, recipe).then(res => {
       toast.success(`recipe edited`)
       this.setState({
@@ -50,7 +51,7 @@ export default class Recipes extends Component {
   }
 
   removeRecipe = (recipe) => {
-    
+
     axios.delete(`/api/recipes/${recipe.id}`).then(res => {
       toast.success(`${recipe.title} removed`)
       this.setState({
@@ -76,11 +77,11 @@ export default class Recipes extends Component {
       this.setState({
         items: res.data
       })
-      
+
     }).catch(err => console.log("error", err))
   }
 
-  
+
 
   navigate = (location) => {
     if (location === "cart") {
@@ -90,13 +91,13 @@ export default class Recipes extends Component {
     }
   }
 
-  itemRemover =(item) => {
+  itemRemover = (item) => {
     axios.delete(`/api/list/${item.id}`).then(res => {
       toast.success(`removed ingredient from your shopping list`)
       this.setState({
-        items : res.data
+        items: res.data
       })
-  }).catch(err => console.log("error", err))
+    }).catch(err => console.log("error", err))
   }
 
   render() {
@@ -104,7 +105,7 @@ export default class Recipes extends Component {
     return (
 
       <div className="mainDiv">
-      
+
         <div className="HeaderDiv">
           <Header searchRecipe={this.searchRecipe}
             recipes={this.recipes} navigate={this.navigate} />
@@ -114,10 +115,10 @@ export default class Recipes extends Component {
 
           {this.state.showCart ? this.state.items.map((item, i) => {
             return (
-            <div>
-              <ul id={i} onClick={()=>this.itemRemover(item)} className="listItems">{item.item}</ul>
-              
-            </div>
+              <div className="shoppinglist">
+                <ul id={i} onClick={() => this.itemRemover(item)} className="listItems">{item.item}</ul>
+                
+              </div>
             )
           }) :
 
@@ -133,7 +134,7 @@ export default class Recipes extends Component {
                       removeRecipe={this.removeRecipe}
                       addItems={this.addItems}
                       createList={this.createList}
-                       />
+                    />
                   </div>
                 )
 
@@ -141,9 +142,9 @@ export default class Recipes extends Component {
               )}
 
             </div>}
-            </div>
-            
-            </div>
+        </div>
+        
+      </div>
     )
   }
 }
