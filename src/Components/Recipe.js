@@ -30,7 +30,7 @@ export default class Recipe extends Component {
         <div className="mainRecipeBody">
           <img className="imageInRecipe" src={recipe.imageUrl} />
           <h2>{recipe.title}</h2>
-          <h3>ingredients:</h3>
+          <h3 className="ingredientAlign">ingredients:</h3>
           
           <div className="ingredientAlign">
           <p>{recipe.ingredient1}</p>
@@ -39,7 +39,7 @@ export default class Recipe extends Component {
           <p>{recipe.ingredient4}</p>
           <p>{recipe.ingredient5}</p>
           </div>
-          <h3>directions:</h3>
+          <h3 className="directionsAlign">directions:</h3>
           <div className="directionsAlign">
           <p>{recipe.directions}</p>
           </div>

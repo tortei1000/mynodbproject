@@ -117,13 +117,15 @@ export default class Recipes extends Component {
             return (
               <div className="shoppinglist">
                 <ul id={i} onClick={() => this.itemRemover(item)} className="listItems">{item.item}</ul>
-                
+
               </div>
             )
           }) :
 
             <div className="createFormParent">
+
               <CreateRecipeForm handleCreate={this.createRecipe} />
+
               {this.state.recipes.map(recipe => {
                 return (
                   <div className="recipeParent">
@@ -143,7 +145,7 @@ export default class Recipes extends Component {
 
             </div>}
         </div>
-        
+
       </div>
     )
   }

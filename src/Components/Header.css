@@ -3,12 +3,13 @@
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  
   text-align: center;
   border-bottom: 4px double #000;
   height: 8vw;
   width: 100vw;
-  font-family: 'Indie Flower', cursive;
+  /* font-family: 'Indie Flower', cursive; */
+  cursor: pointer;
+  font-weight: 800;
 }
 
 .search{

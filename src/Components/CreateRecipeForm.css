@@ -8,21 +8,16 @@
 }
 .fewerElements{
   margin: 5px;
-  border: 2px solid #0099CC;
-  width: 20vw;
-  height: 31vw;
-  font-size: 10px;
+  width: 100%;
+  font-size: 18px;
   align-content: center;
   justify-items: center;
-  background: #feffff;
-  background: -moz-linear-gradient(top, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
-  background: -webkit-linear-gradient(top, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
-  background: linear-gradient(to bottom, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff',  endColorstr='#a0d8ef',GradientType=0 );
-  overflow: auto;
-  position: relative;
-  left: 1px;
-  border-radius: 30px;
+  background:white;
+  border-radius: 10px;
+}
+
+.fewerElements:hover{
+  box-shadow: 20px 20px 30px 0px rgba(0,0,0,0.25);
 }
 
 .bottomButton{
@@ -37,5 +32,13 @@
   background-color: #008CBA;
   color: white;
 }
+.justcreate{
+  width: 30%;
+  position: absolute;
+  left: 20px;
 
-
+}
+.mainDivinCreate{
+  width: 30%;
+  display: flex;
+}
