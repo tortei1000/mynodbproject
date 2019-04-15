@@ -50,34 +50,6 @@
   color: #008CBA;
 }
 
-.bottomButton{
-  color: #0099CC; 
-  background: transparent;
-  border: 2px solid #0099CC;
-  border-radius: 6px; 
-  height: 50px;
-  width: 130px;
-  padding: 5px;
-}
-.bottomButton:hover{
-  background-color: #008CBA;
-  color: white;
-}
-
-.bottomButton2{
-  color: #008CBA;; 
-  background: transparent;
-  border: 2px solid #0099CC;
-  border-radius: 6px; 
-  height: 50px;
-  width: 130px;
-  padding: 5px;
-}
-.bottomButton2:hover{
-  background-color: #008CBA;
-  color: white;
-}
-
 .ingredientAlign{
   text-align: left;
   margin-left: 20px;
