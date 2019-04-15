@@ -47,12 +47,11 @@ export default class Recipe extends Component {
           <p>{recipe.directions}</p>
           </div>
           
-          <div>
-          <i className="far fa-edit" onClick={this.toggleEdit}></i>
-          <i class="far fa-trash-alt" onClick={() => this.props.removeRecipe(recipe)}></i>
           
-          </div>
-          <button className="bottomButton2" onClick={()=> this.props.createList(recipe)} >Add ingredients to shopping list</button>
+          <i className="far fa-edit" title="Edit Recipe" onClick={this.toggleEdit}></i>
+          <i class="far fa-trash-alt" title="Delete Recipe" onClick={() => this.props.removeRecipe(recipe)}></i>
+          <i class="fas fa-clipboard-list" title="Add ingredients to shopping list" onClick={()=> this.props.createList(recipe)} ></i> 
+          
 
         </div>
     )

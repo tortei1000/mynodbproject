@@ -83,7 +83,8 @@ class CreateRecipeForm extends Component {
         placeholder="This text box is provided to you by Alex. directions"/>
         </div>
         </div>
-        <button className="bottomButton" onClick={this.handleClick} >create new recipe</button>
+        <i class="far fa-plus-square" title="Add recipe" onClick={this.handleClick}></i>
+        
         </div>
       </div>
     )
