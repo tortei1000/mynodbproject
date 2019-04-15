@@ -28,7 +28,10 @@ export default class Recipe extends Component {
     return (
       this.state.edit ? <EditRecipeForm recipe={recipe} updateRecipe={this.props.updateRecipe} toggleEdit={this.toggleEdit} /> :
         <div className="mainRecipeBody">
-          <img className="imageInRecipe" src={recipe.imageUrl} />
+          
+          
+          <img className="imageInRecipe" src={recipe.imageUrl}  />
+          
           <h2>{recipe.title}</h2>
           <h3 className="ingredientAlign">ingredients:</h3>
           
@@ -44,8 +47,10 @@ export default class Recipe extends Component {
           <p>{recipe.directions}</p>
           </div>
           
-          <div><button className="bottomButton" onClick={this.toggleEdit}>edit</button>
-          <button className="bottomButton" onClick={() => this.props.removeRecipe(recipe)}>Delete</button>
+          <div>
+          <i className="far fa-edit" onClick={this.toggleEdit}></i>
+          <i class="far fa-trash-alt" onClick={() => this.props.removeRecipe(recipe)}></i>
+          
           </div>
           <button className="bottomButton2" onClick={()=> this.props.createList(recipe)} >Add ingredients to shopping list</button>
 
