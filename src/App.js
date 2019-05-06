@@ -13,6 +13,7 @@ class App extends Component {
       <div className="App">
           
         <Recipes />
+        <Calendar />
         <ToastContainer />
         
   
